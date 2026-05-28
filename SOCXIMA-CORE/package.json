@@ -4,6 +4,7 @@
   "description": "Plataforma P2P Descentralizada sobre Blockchain Solana",
   "private": true,
   "homepage": "https://eveliollo.github.io/SOCXIMA/SOCXIMA-CORE/",
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
