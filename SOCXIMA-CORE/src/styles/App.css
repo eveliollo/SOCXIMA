@@ -1,0 +1,47 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a4d 50%, #0f2f4f 100%);
+}
+
+/* Contenedor principal */
+main, section, div[role="main"] {
+  flex: 1;
+}
+
+/* Animación entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Contenedores de página */
+div.home,
+div.dashboard,
+div.admin,
+div.ai-page,
+div.marketplace {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  div.home,
+  div.dashboard,
+  div.admin,
+  div.ai-page,
+  div.marketplace {
+    padding: 1rem;
+  }
+}
