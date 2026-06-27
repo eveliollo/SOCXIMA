@@ -1,8 +1,0 @@
-[package]
-name = "socxima-master-os"
-version = "1.0.0"
-edition = "2021"
-[dependencies]
-tokio = { version = "1", features = ["full"] }
-chrono = { version = "0.4", features = ["serde"] }
-rand = "0.8"
