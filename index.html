@@ -2,23 +2,163 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>SOCXIMA | Red Descentralizada</title>
+    <meta name="description" content="SOCXIMA — Plataforma P2P descentralizada sobre Solana. Autonomía, privacidad y control de la información.">
+    <meta name="keywords" content="SOCXIMA, descentralizado, P2P, Solana, privacidad, autonomía">
+    <meta name="author" content="Evelio Llovera">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SOCXIMA | Red Descentralizada">
+    <meta property="og:description" content="Plataforma P2P descentralizada sobre Blockchain Solana. Autonomía, privacidad y control de la información.">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="SOCXIMA">
+    <!-- Replace with an absolute URL to a representative image if you have one -->
+    <meta property="og:image" content="/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SOCXIMA | Red Descentralizada">
+    <meta name="twitter:description" content="Plataforma P2P descentralizada sobre Blockchain Solana. Autonomía, privacidad y control de la información.">
+    <meta name="twitter:image" content="/og-image.png">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SOCXIMA</h1>
-        <p>Autonomía, Privacidad, Descentralización.</p>
+    <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Saltar al contenido principal</a>
+    <header role="banner">
+        <div class="container">
+            <h1>SOCXIMA</h1>
+            <p class="tagline">Autonomía, Privacidad, Descentralización.</p>
+            <nav role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#bienvenido">Bienvenido</a></li>
+                    <li><a href="#acceso">Acceso</a></li>
+                    <li><a href="#descargas">Descargas</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Bienvenido</h2>
+
+    <main id="main" role="main" class="container">
+        <section id="bienvenido" aria-labelledby="h-bienvenido">
+            <h2 id="h-bienvenido">Bienvenido</h2>
             <p>SOCXIMA es una red privada diseñada para la gestión autónoma de información.</p>
         </section>
-        <section>
-            <h2>Acceso</h2>
+
+        <section id="acceso" aria-labelledby="h-acceso">
+            <h2 id="h-acceso">Acceso</h2>
             <p>Para unirte a la red, utiliza el software oficial distribuido a través de nodos verificados.</p>
         </section>
+
+        <!-- Sección de descargas añadida -->
+        <section id="descargas" aria-labelledby="h-descargas">
+          <h2 id="h-descargas">Descargas</h2>
+
+          <p>Selecciona el paquete adecuado o sigue las instrucciones para instalar en Termux.</p>
+
+          <div class="downloads">
+            <!-- Botones de descarga (actualiza las URLs a tus assets reales o a GitHub Releases) -->
+            <a class="btn" href="https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/socxima-linux-arm.tar.gz" aria-label="Descargar paquete SOCXIMA para Linux ARM">Descargar (Linux ARM)</a>
+            <a class="btn" href="https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/socxima-linux-x86_64.tar.gz" aria-label="Descargar paquete SOCXIMA para Linux x86_64">Descargar (Linux x86_64)</a>
+            <a class="btn" href="https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/socxima-termux.tar.gz" aria-label="Descargar paquete SOCXIMA para Termux">Descargar (Termux)</a>
+
+            <!-- Checksum y firma -->
+            <div class="verification" aria-live="polite">
+              <p>Integridad y firma:</p>
+              <ul>
+                <li><a href="https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/SHA256SUMS" aria-label="Archivo SHA256SUMS">SHA256SUMS</a></li>
+                <li><a href="https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/SHA256SUMS.asc" aria-label="Firma GPG del archivo SHA256SUMS">SHA256SUMS.asc (firma GPG)</a></li>
+                <li><a href="/keys/socxima.pub" aria-label="Clave pública GPG">Clave pública (GPG)</a></li>
+              </ul>
+              <p>Verifica los archivos con <code>sha256sum -c SHA256SUMS</code> y <code>gpg --verify SHA256SUMS.asc</code>.</p>
+            </div>
+          </div>
+
+          <hr>
+
+          <!-- Instrucciones Termux -->
+          <div class="termux-install">
+            <h3>Instalación rápida en Termux</h3>
+            <p>Si ejecutas Termux en Android, copia y pega este comando en tu terminal (recomendado usar la <em>release</em> oficial):</p>
+
+            <div class="command-block" role="region" aria-label="Comando de instalación para Termux">
+              <pre id="termux-cmd">curl -fsSL https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/install-socxima-termux.sh | sh</pre>
+              <button id="copy-command" aria-label="Copiar comando de instalación">Copiar comando</button>
+            </div>
+
+            <p>Alternativa manual (más segura):</p>
+            <ol>
+              <li>Descargar: <code>wget https://github.com/eveliollo/SOCXIMA/releases/download/v0.0.0/socxima-termux.tar.gz</code></li>
+              <li>Verificar SHA256: <code>sha256sum socxima-termux.tar.gz</code></li>
+              <li>Extraer: <code>tar -xzf socxima-termux.tar.gz</code></li>
+              <li>Instalar: <code>cd socxima && ./install.sh</code></li>
+            </ol>
+            <p class="note">Sustituye las URLs de ejemplo por las rutas reales de tus assets o Release de GitHub si son diferentes.</p>
+          </div>
+        </section>
     </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> SOCXIMA. Creado por Evelio Llovera.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Actualiza el año en el pie de página automáticamente
+        (function(){
+            var y = new Date().getFullYear();
+            var el = document.getElementById('year');
+            if(el) el.textContent = y;
+
+            // Mejora mínima de accesibilidad: muestra el enlace "skip" cuando se enfoca
+            var skip = document.querySelector('.skip-link');
+            if(skip){
+                skip.addEventListener('focus', function(){
+                    this.style.position = 'static';
+                    this.style.left = '0';
+                    this.style.width = 'auto';
+                    this.style.height = 'auto';
+                });
+                skip.addEventListener('blur', function(){
+                    this.style.position = 'absolute';
+                    this.style.left = '-999px';
+                });
+            }
+
+            // Copiar comando al portapapeles y notificar (accesible)
+            var copyBtn = document.getElementById('copy-command');
+            var termuxCmd = document.getElementById('termux-cmd');
+            if(copyBtn && termuxCmd && navigator.clipboard){
+              copyBtn.addEventListener('click', function(){
+                navigator.clipboard.writeText(termuxCmd.textContent.trim()).then(function(){
+                  copyBtn.textContent = 'Copiado ✓';
+                  setTimeout(function(){ copyBtn.textContent = 'Copiar comando'; }, 2000);
+                }).catch(function(){
+                  alert('No se pudo copiar automáticamente. Selecciona y copia manualmente el comando.');
+                });
+              });
+            }
+
+            // Detectar Termux (user-agent heurístico) y resaltar instrucciones
+            try {
+              var ua = navigator.userAgent || '';
+              var isTermux = /Termux/i.test(ua) || (/Android/i.test(ua) && /Termux/i.test(ua));
+              if(isTermux){
+                var termuxSection = document.querySelector('.termux-install');
+                if(termuxSection){
+                  termuxSection.style.border = '2px solid #0a74da';
+                  termuxSection.setAttribute('aria-hidden', 'false');
+                }
+              }
+            } catch(e) { /* no crítico */ }
+        })();
+    </script>
 </body>
 </html>
